@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Author</key>
+	<string>Khadafi</string>
+	<key>CFBundleDisplayName</key>
+	<string>ruSendTorrent</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.jmvalente.rusendtorrent</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.85</string>
+	<key>CFBundleVersion</key>
+	<string>0.8.5</string>
+	<key>Chrome</key>
+	<dict>
+		<key>Context Menu Items</key>
+		<array>
+			<dict>
+				<key>Command</key>
+				<string>send_to_rutorrent</string>
+				<key>Identifier</key>
+				<string>send_to_rutorrent</string>
+				<key>Title</key>
+				<string>Send to ruTorrent</string>
+			</dict>
+		</array>
+		<key>Global Page</key>
+		<string>global.html</string>
+	</dict>
+	<key>Content</key>
+	<dict>
+		<key>Scripts</key>
+		<dict>
+			<key>End</key>
+			<array>
+				<string>ruTorrent.js</string>
+			</array>
+		</dict>
+	</dict>
+	<key>Description</key>
+	<string>Send items to ruTorrent</string>
+	<key>ExtensionInfoDictionaryVersion</key>
+	<string>1.0</string>
+	<key>Permissions</key>
+	<dict>
+		<key>Website Access</key>
+		<dict>
+			<key>Include Secure Pages</key>
+			<true/>
+			<key>Level</key>
+			<string>All</string>
+		</dict>
+	</dict>
+	<key>Update Manifest URL</key>
+	<string>http://jmvalente.com/projects/SafariExtensions-Manifest.plist</string>
+	<key>Website</key>
+	<string>http://jmvalente.com</string>
+</dict>
+</plist>

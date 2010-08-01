@@ -1,0 +1,5 @@
+2010-08-01 - v0.8.6
+--------------------------------------------------------------------
+* Actually started documenting stuff
+* A complete rewrite of code allowing for a functional extension
+* Neatened up code in preparation for a release

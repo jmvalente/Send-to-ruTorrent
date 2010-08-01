@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>DefaultValue</key>
+		<string>127.0.0.1</string>
+		<key>Key</key>
+		<string>ruIP</string>
+		<key>Title</key>
+		<string>IP or Hostname</string>
+		<key>Type</key>
+		<string>TextField</string>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<string>/</string>
+		<key>FalseValue</key>
+		<real>0.0</real>
+		<key>Key</key>
+		<string>ruDirectory</string>
+		<key>Title</key>
+		<string>ruTorrent Directory(no trailing slash)</string>
+		<key>TrueValue</key>
+		<real>1</real>
+		<key>Type</key>
+		<string>TextField</string>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<real>0.0</real>
+		<key>FalseValue</key>
+		<real>0.0</real>
+		<key>Key</key>
+		<string>useSSL</string>
+		<key>Title</key>
+		<string>Use SSL</string>
+		<key>TrueValue</key>
+		<real>1</real>
+		<key>Type</key>
+		<string>CheckBox</string>
+	</dict>
+</array>
+</plist>

@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<script>
+// if event handlers are in the global HTML page register with application:
+safari.application.addEventListener("command", performCommand, true);
+safari.application.addEventListener("validate", validateCommand, true);
+
+function performCommand(event) {
+	var webIP = safari.extension.settings.ruIP;
+	var ruPath = safari.extension.settings.ruDirectory;
+	var fullPath = webIP.concat(ruPath); //Sometimes ruTorrent is installed at the root directory. Other times it is not.
+	var uiURL = makeWebUILink(fullPath, event.userInfo.url)
+	if (event.command != "send_to_rutorrent") //Make sure that is the command being executed. 
+		return;
+		alert("Sending to ruTorrent");
+		event.currentTarget.activeBrowserWindow.openTab().url =  uiURL; //For now it has to open a damn window. I'm working on this
+		
+}
+
+//You only want a specific critera for the context menu to work. 
+//Currently this should work on all Gazelle sites I can think of.
+//It may work on others too if "torrents.php?action=download" is a valid torrent link
+function validateCommand(event) {
+	if (event.command != "send_to_rutorrent")
+		return;
+	if (event.userInfo.name !="A" || event.userInfo.url.search(/torrents\.php\?action=download/) == -1){
+		event.target.disabled = true;
+	}
+}
+//Create the link that will be passed to ruTorrent v3+
+function makeWebUILink(webIPforLink, linkhref)
+{
+		return returnSSL()+"://"+webIPforLink+"/php/addtorrent.php?url="+escape(linkhref);
+}
+//Returns the protocol depending on whether or not you have SSL enabled in the extension settings.
+function returnSSL() {
+	var ruSSL = safari.extension.settings.useSSL;
+	if (ruSSL == "1") {
+		return "https";
+	}
+	else {
+		return "http";
+	}
+}
+
+</script>
