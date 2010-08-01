@@ -7,13 +7,13 @@
 	<key>CFBundleDisplayName</key>
 	<string>ruSendTorrent</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.jmvalente.rusendtorrent</string>
+	<string>com.jmvalente.safari.ruSendTorrent</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.85</string>
+	<string>0.86</string>
 	<key>CFBundleVersion</key>
-	<string>0.8.5</string>
+	<string>0.8.6</string>
 	<key>Chrome</key>
 	<dict>
 		<key>Context Menu Items</key>
