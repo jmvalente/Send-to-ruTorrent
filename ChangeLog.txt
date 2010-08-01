@@ -1,3 +1,8 @@
+2010-08-01 - v0.9.0
+--------------------------------------------------------------------
+* Fixed a problem where the default directory included a transparent slash
+* Added support for uTorrent and ruTorrent v2
+
 2010-08-01 - v0.8.6
 --------------------------------------------------------------------
 * Actually started documenting stuff

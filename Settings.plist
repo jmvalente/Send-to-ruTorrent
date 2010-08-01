@@ -4,23 +4,49 @@
 <array>
 	<dict>
 		<key>DefaultValue</key>
+		<string>v3</string>
+		<key>Key</key>
+		<string>webUI</string>
+		<key>Title</key>
+		<string>WebUI</string>
+		<key>Titles</key>
+		<array>
+			<string>ruTorrent v3</string>
+			<string>ruTorrent v2</string>
+			<string>uTorrent </string>
+		</array>
+		<key>Type</key>
+		<string>PopUpButton</string>
+		<key>Values</key>
+		<array>
+			<string>v3</string>
+			<string>v2</string>
+			<string>u</string>
+		</array>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
 		<string>127.0.0.1</string>
+		<key>FalseValue</key>
+		<real>0.0</real>
 		<key>Key</key>
 		<string>ruIP</string>
 		<key>Title</key>
 		<string>IP or Hostname</string>
+		<key>TrueValue</key>
+		<real>1</real>
 		<key>Type</key>
 		<string>TextField</string>
 	</dict>
 	<dict>
 		<key>DefaultValue</key>
-		<string>/</string>
+		<string></string>
 		<key>FalseValue</key>
 		<real>0.0</real>
 		<key>Key</key>
 		<string>ruDirectory</string>
 		<key>Title</key>
-		<string>ruTorrent Directory(no trailing slash)</string>
+		<string>Installation Directory(no trailing slash)</string>
 		<key>TrueValue</key>
 		<real>1</real>
 		<key>Type</key>

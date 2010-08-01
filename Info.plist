@@ -11,9 +11,9 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.86</string>
+	<string>0.9</string>
 	<key>CFBundleVersion</key>
-	<string>0.8.6</string>
+	<string>0.9.0</string>
 	<key>Chrome</key>
 	<dict>
 		<key>Context Menu Items</key>
@@ -24,7 +24,7 @@
 				<key>Identifier</key>
 				<string>send_to_rutorrent</string>
 				<key>Title</key>
-				<string>Send to ruTorrent</string>
+				<string>Send to WebUI</string>
 			</dict>
 		</array>
 		<key>Global Page</key>
@@ -41,7 +41,7 @@
 		</dict>
 	</dict>
 	<key>Description</key>
-	<string>Send items to ruTorrent</string>
+	<string>Send items to WebUI</string>
 	<key>ExtensionInfoDictionaryVersion</key>
 	<string>1.0</string>
 	<key>Permissions</key>

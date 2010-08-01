@@ -9,9 +9,10 @@ function performCommand(event) {
 	var ruPath = safari.extension.settings.ruDirectory;
 	var fullPath = webIP.concat(ruPath); //Sometimes ruTorrent is installed at the root directory. Other times it is not.
 	var uiURL = makeWebUILink(fullPath, event.userInfo.url)
+	var confirmMSG = getUIConfirm();
 	if (event.command != "send_to_rutorrent") //Make sure that is the command being executed. 
 		return;
-		alert("Sending to ruTorrent");
+		alert(confirmMSG);
 		event.currentTarget.activeBrowserWindow.openTab().url =  uiURL; //For now it has to open a damn window. I'm working on this
 		
 }
@@ -29,7 +30,19 @@ function validateCommand(event) {
 //Create the link that will be passed to ruTorrent v3+
 function makeWebUILink(webIPforLink, linkhref)
 {
-		return returnSSL()+"://"+webIPforLink+"/php/addtorrent.php?url="+escape(linkhref);
+		var webUI = safari.extension.settings.webUI;
+		switch(webUI){
+			case "v3": 
+				return returnSSL()+"://"+webIPforLink+"/php/addtorrent.php?url="+escape(linkhref);
+			case "v2":
+				return returnSSL()+"://"+webIPforLink+"/addtorrent.php?url="+escape(linkhref);
+			case "u":	
+				return returnSSL()+"://"+webIPforLink+"/gui/?action=add-url&s="+escape(linkhref);
+			default:
+				return "Something is wrong!";
+		
+		}
+
 }
 //Returns the protocol depending on whether or not you have SSL enabled in the extension settings.
 function returnSSL() {
@@ -41,5 +54,17 @@ function returnSSL() {
 		return "http";
 	}
 }
-
+function getUIConfirm(){
+	var webUI = safari.extension.settings.webUI;
+	switch(webUI){
+		case "v3": 
+			return "Sent to ruTorrent v3.";
+		case "v2":
+			return "Sent to ruTorrent v2.";
+		case "u":	
+			return "Sent to uTorrent.";
+		default:
+			return "Something is wrong!";
+	}
+}
 </script>
